@@ -10,3 +10,9 @@ A collection of small web-security challenges for beginners to get awareness and
  ```
 You guys can update what you want to do for this week in the README file and when its complete either strike it out or put a tick mark next to it.         
 **Don't forget** to update this file **weekly** for others to know the progress.
+
+
+## Goals for the week
+- [ ] Finish the playlist sent in the whatsapp group.      
+- [ ] Setting up the login page.      
+- [ ] Adding a Register form.      
