@@ -1,0 +1,24 @@
+div.container {
+    width: 100%;
+}
+
+header {
+    background-color: black;
+    padding: 1em;
+    color: white;
+    clear: left;
+    text-align: center;
+}
+
+body {
+    font-family: Roboto;
+    font-size: small;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    font-family: "Open Sans";
+}
