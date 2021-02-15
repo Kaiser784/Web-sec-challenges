@@ -1,0 +1,76 @@
+@import url("fonts.css");
+@import url("font-awesome/css/font-awesome.min.css");
+@import url("micons/micons.css");
+
+/*You must be really a detective to even check here, I like your enthusiasm kid
+  Right now there is nothing I can give you here but don't forget to check these files in the harder levels （‾△ﾟ）*/
+
+html {
+	font-size: 10px;
+}
+html, body {
+	height: 100%;
+}
+body {
+	background: #FFFFFF;
+	font-family: "roboto-regular", sans-serif;
+	font-size: 1.6rem;
+	line-height: 3rem;
+	color: #333333;
+}
+#home {
+	background: #020507;
+	width: 100%;
+	height: 100%;
+	min-height: 800px;
+	z-index: 600;
+	position: relative;
+}
+.content-wrap-table {
+	width: 100%;
+	height: 100%;
+	display: table;
+	position: relative;
+}
+.main-content-tablecell {
+	display: table-cell;
+	vertical-align: bottom;
+	z-index: 700;
+}
+.main-content-tablecell .row {
+	position: relative;
+	padding-top: 4.2rem;
+	padding-bottom: 15rem;
+}
+
+.main-content-tablecell #counter:after {
+	clear: both;
+}
+.main-content-tablecell #counter .half {
+	float: left;
+}
+.main-content-tablecell #counter span {
+	float: left;
+	text-align: right;
+	color: #FFFFFF;
+	font-family: "roboto-black", sans-serif;
+	font-size: 12rem;
+	line-height: 1;
+	padding: 0;
+	margin-bottom: 1.5rem;
+}
+.main-content-tablecell #counter span sup {
+	font-family: "roboto-bold", sans-serif;
+	font-size: .17em;
+	color: rgba(255, 255, 255, 0.3);
+	top: -3.6em;
+	right: 1em;
+}
+.main-content-tablecell h1 {
+	font-size: 4.2rem;
+	line-height: 1.143;
+	color: #FFFFFF;
+	margin-bottom: 1.2rem;
+	max-width: 600px;
+	position: relative;
+}
