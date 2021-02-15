@@ -12,6 +12,7 @@ Author              : Alias or real name (link to their linkedin)
 Challenge name      : challenge_name
 Description         : should not exceed 100 words, if any additional instruction
                       is to be given a google doc file may be linked
+Hints               : If any or else specify as None
 Difficulty          : Easy/Medium/Hard/Insane
 Points              : 5/10/20/35/50
 ```
@@ -26,4 +27,4 @@ For now the challenges are strictly web-based, we will extend to other categorie
 #### Week - 1
 - [x] Warm-up/welcome exercise 
 - [ ] Source-code analysis 
-- [ ] robots.txt 
+- [x] robots.txt 
