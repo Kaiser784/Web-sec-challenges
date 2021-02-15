@@ -18,6 +18,8 @@ Points              : 5/10/20/35/50
 ```
 This is to make it easier for the administrators to handle them.
 
+**Whenever a new challenge is uploaded, this [Google Doc](https://docs.google.com/document/d/173pkVeaRsY3EiEYnFtPknC993OOEMBZzYYdqjit1jJM/edit?usp=sharing) must be updated with the required data for a smooth transition of the admins.**
+
 If you are someone other than the team trying to submit a challenge you'll have to submit a private offical writeup with the folder containing the main files and the markdown in the above format as a zip to example@gmail.com.      
 
 For now the challenges are strictly web-based, we will extend to other categories in the near future.
