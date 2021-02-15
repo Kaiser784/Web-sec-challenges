@@ -1,5 +1,4 @@
 ## Register page
----
 
 To include any css or js files:-    
 - Create a folder in the main directory (where the manage.py resides) and name it **static**.    
