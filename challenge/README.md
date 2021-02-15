@@ -28,5 +28,8 @@ For now the challenges are strictly web-based, we will extend to other categorie
 
 #### Week - 1
 - [x] Warm-up/welcome exercise 
-- [ ] Source-code analysis 
+- [x] Source-code analysis 
 - [x] robots.txt 
+#### Week - 2
+- [ ] Default Credentials
+- [ ] Cookie editor 
