@@ -15,4 +15,6 @@ You guys can update what you want to do for this week in the README file and whe
 ## Goals for the week
 - [ ] Finish the playlist sent in the whatsapp group.      
 - [ ] Setting up the login page.      
-- [ ] Adding a Register form.      
+- [ ] Adding a Register form.
+
+## 
