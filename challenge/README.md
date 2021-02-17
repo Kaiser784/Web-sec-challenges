@@ -33,3 +33,4 @@ For now the challenges are strictly web-based, we will extend to other categorie
 #### Week - 2
 - [ ] Default Credentials
 - [ ] Cookie editor 
+- [ ] ohsint
