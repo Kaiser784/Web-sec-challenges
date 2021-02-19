@@ -19,5 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # 'register/' is searched and cutoff from the address if found and the remaining portion is sent to register.urls
-    path('register/', include('register.urls'))
+    path('register/', include('webpages.urls'))
 ]
+
+
