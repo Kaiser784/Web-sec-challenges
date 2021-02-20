@@ -18,13 +18,6 @@
 
     <!-- ======= Login Page ======= -->
     <div class="form">
-      {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-{{message.tags}}">
-          {{message}}
-        </div>
-          {% endfor %}
-        {% endif%}
         <ul class="tab-group">
           <li class="tab active"><a href="#register">Register</a></li>
           <li class="tab"><a href="#login">Log In</a></li>
