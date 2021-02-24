@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from webpages import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # 'register/' is searched and cutoff from the address if found and the remaining portion is sent to register.urls
-    path('register/', include('webpages.urls'))
+    path('register/', views.register, name='register'),
+    path('login/', views.login, name='login')
+    
 ]
 
 
