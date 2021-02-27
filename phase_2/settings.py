@@ -128,3 +128,9 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+
+# Settings for login page
+# Redirects the the user after successful login
+LOGIN_REDIRECT_URL = 'success'
