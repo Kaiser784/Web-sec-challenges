@@ -31,6 +31,5 @@ For now the challenges are strictly web-based, we will extend to other categorie
 - [x] Source-code analysis 
 - [x] robots.txt 
 #### Week - 2
-- [ ] Default Credentials
+- [x] Default Credentials
 - [ ] Cookie editor 
-- [ ] ohsint
