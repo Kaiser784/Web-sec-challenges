@@ -21,13 +21,14 @@ from webpages import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #HOLD UP!!!
+    # home function points to the function which is exactly similar to success function so just replace it with the home page.
     path('home/', views.home, name='webpages-home'),
     # 'register/' is searched and cutoff from the address if found and the remaining portion is sent to register.urls
     path('success/', views.success, name='success'),
     path('register/', views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='register/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='register/logout.html'), name='logout'),
-    
+    path('logout/', auth_views.LogoutView.as_view(template_name='register/logout.html'), name='logout'),    
 ]
 
 

@@ -25,7 +25,11 @@
     </nav>
 
     <div>
+      {% if user.is_authenticated%}
+        <h1>You have logged in!!!</h1>
+      {% else %}
         <h1>Account creation success {{data}}!</h1>
+      {% endif %}
     </div>
 
 </body>
