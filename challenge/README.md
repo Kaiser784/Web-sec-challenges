@@ -14,7 +14,7 @@ Description         : should not exceed 100 words, if any additional instruction
                       is to be given a google doc file may be linked
 Hints               : If any or else specify as None
 Difficulty          : Easy/Medium/Hard/Insane
-Points              : 5/10/20/35/50
+Points              : 50/100/200/350/500 venari
 ```
 This is to make it easier for the administrators to handle them.
 
@@ -33,3 +33,4 @@ For now the challenges are strictly web-based, we will extend to other categorie
 #### Week - 2
 - [x] Default Credentials
 - [ ] Cookie editor 
+- [x] User-agents
