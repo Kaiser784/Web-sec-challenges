@@ -133,4 +133,5 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-SECRET_KEY = 'Mr.t0rbo0@nafnag78-hwyouh'
+# SECRET_KEY = 'Mr.t0rbo0@nafnag78-hwyouh'
+SECRET_KEY = os.environ.get('SECRET_KEY')

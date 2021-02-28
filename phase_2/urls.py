@@ -18,12 +18,11 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from webpages import views
+from challenges import views as ch_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #HOLD UP!!!
-    # home function points to the function which is exactly similar to success function so just replace it with the home page.
-    path('home/', views.home, name='webpages-home'),
+    path('home/', ch_views.home, name='webpages-home'),
     # 'register/' is searched and cutoff from the address if found and the remaining portion is sent to register.urls
     path('success/', views.success, name='success'),
     path('register/', views.register, name='register'),
