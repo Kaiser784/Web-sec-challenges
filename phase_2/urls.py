@@ -22,7 +22,7 @@ from challenges import views as ch_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', ch_views.home, name='webpages-home'),
+    path('', ch_views.home, name='webpages-home'),
     # 'register/' is searched and cutoff from the address if found and the remaining portion is sent to register.urls
     path('success/', views.success, name='success'),
     path('register/', views.register, name='register'),
@@ -30,5 +30,3 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='register/logout.html'), name='logout'),
     path('challenges/',include('challenges.urls'))    
 ]
-
-
