@@ -4,29 +4,43 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
+
+  <!-- Font Awesome Icons -->>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
           <ul class="nav navbar-nav">
-            {#Register Link#}
-            <li><a class="navbar-link" href="{% url 'register' %}">Register</a></li>  
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
             {#Logic on what to display#}
             {% if user.is_authenticated %}
-              <li><a href="{% url 'logout' %}">Logout</a></li>
+              <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             {% else %}
-              <li><a class="navbar-link" href="{% url 'login' %}">Login</a></li>
+              <li><a class="navbar-link" href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+              <li><a class="navbar-link" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             {% endif %}
           </ul>
         </div>
-    </nav>
+      </nav>
 
     <div>
         <h1>Account creation success {{data}}!</h1>
     </div>
+
+  <!-- Vendor JS Files -->>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </body>
 
