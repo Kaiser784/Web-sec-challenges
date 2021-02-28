@@ -1,0 +1,84 @@
+
+body{
+	background-color: #bfbfbf;
+}
+.card{
+	margin-top: 50px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border-width: 3px;
+	border-color: black;
+	background-color: #d9ffb3;
+}
+ .card-text{
+	white-space: break-spaces;
+}
+
+.headings{
+	font-weight:  bold;
+  font-size: 20px; 
+}
+
+#mainhead{
+	color: #80ffff;
+	text-align: center;
+	padding: 20px;
+	background-color: black;
+}
+
+.subform{
+	margin-top: 15px;
+}
+
+.labeled{
+	margin-right:10px;
+	font-weight: bold;
+
+}
+
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+   /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-head{
+  text-align: center;
+} 
+
+.hint{
+  display: none;
+}

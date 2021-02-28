@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['anfang.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'challenges',
     'webpages.apps.webpagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -132,3 +133,4 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+SECRET_KEY = 'Mr.t0rbo0@nafnag78-hwyouh'
