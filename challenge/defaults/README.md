@@ -5,5 +5,6 @@ Description         : Developers always forget to remove something before
                       pushing to production
 Hints               : None                      
 Difficulty          : Easy
-Points              : 5
+Link                : http://anfang-challenges.rf.gd/defaults/
+Points              : 50 venari
 ```

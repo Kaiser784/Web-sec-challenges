@@ -4,5 +4,6 @@ Challenge name      : Inspector
 Description         : Everything needs a detailed Inspection
 Hints               : None                      
 Difficulty          : Easy
-Points              : 5
+Link                : http://anfang-challenges.rf.gd/inspect/
+Points              : 50 venari
 ```
