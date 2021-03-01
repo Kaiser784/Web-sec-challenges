@@ -6,3 +6,4 @@ webpages/templates/register/login3.html
 challenges/__pycache__/
 challenges/migrations/__pycache__/
 zSHORT_NOTES/
+db.sqlite3
