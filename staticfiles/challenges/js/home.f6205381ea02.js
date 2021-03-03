@@ -4,6 +4,7 @@ let modal2 = document.getElementById("myModal2");
 let modal3 = document.getElementById("myModal3");
 let modal4 = document.getElementById("myModal4");
 let modal5 = document.getElementById("myModal5");
+let modal6 = document.getElementById("myModal6");
 let modals = document.querySelectorAll(".modal");
 //Get buttons
 let btn1 = document.getElementById("myBtn1");
@@ -11,6 +12,7 @@ let btn2 = document.getElementById("myBtn2");
 let btn3 = document.getElementById("myBtn3");
 let btn4 = document.getElementById("myBtn4");
 let btn5 = document.getElementById("myBtn5");
+let btn6 = document.getElementById("myBtn6");
 let buttons = document.querySelectorAll(".btn.btn-primary");
 
 
@@ -39,6 +41,9 @@ btn5.onclick = function() {
   modal5.style.display = "block";
 }
 
+btn6.onclick = function() {
+  modal6.style.display = "block";
+}
 
 /*
 buttons.forEach(function(button) {
@@ -69,6 +74,10 @@ window.onclick = function(event) {
 
   if (event.target == modal5) {
     modal5.style.display = "none";
+  }
+
+  if (event.target == modal6) {
+    modal6.style.display = "none";
   }
 
 }
