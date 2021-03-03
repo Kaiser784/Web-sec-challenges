@@ -4,5 +4,6 @@ Challenge name      : The Robots
 Description         : What does robots mean to a website?
 Hints               : None
 Difficulty          : Easy
-Points              : 5
+Link                : http://anfang-challenges.rf.gd/robots/
+Points              : 50 venari
 ```

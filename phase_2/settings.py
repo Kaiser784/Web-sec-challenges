@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,17 +22,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '03r%@0%yp$)^*e05-k=v3wgy7#mxl#28pdg0-vq&fsm_ri6cu('
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['anfang.herokuapp.com', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'challenges',
     'webpages.apps.webpagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -75,13 +78,22 @@ WSGI_APPLICATION = 'phase_2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME' : 'anfang',
+#         'USER': 'anfanguser',
+#         'PASSWORD': 'anfangphase_2',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        #changed the path string for database.
-        'NAME' : str(os.path.join(BASE_DIR, "db.sqlite3"))
-    }
+    'default' : dj_database_url.config(default='postgresql://anfanguser:anfangphase_2@localhost/anfang', conn_max_age=600)
 }
 
 
@@ -121,16 +133,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+LOGIN_REDIRECT_URL = 'webpages-home'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'assets'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-
-# Settings for login page
-# Redirects the the user after successful login
-LOGIN_REDIRECT_URL = 'success'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# SECRET_KEY = 'Mr.t0rbo0@nafnag78-hwyouh'

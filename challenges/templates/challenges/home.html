@@ -1,0 +1,266 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Challenges</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'challenges/home.css' %}">
+</head>
+<body>
+
+	<h1 id="mainhead">CHALLENGES FOR YOU</h1>
+
+	
+	
+<div class="container">
+  <div class="row">
+    <div class="col">
+    	<div class="card">
+  		<div class="card-body">
+    		<h5 class="card-title" style="text-align: center;">WARM-UP</h5>
+    		<p class="card-text">An easy into to start things off</p>
+    		<p class="card-text" ><span class = "headings">Challenge name</span>  : Warmup</p>
+    		<p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p>
+    		<p class="card-text" ><span class = "headings">Points</span>                      : 50</p> 
+   			<button id ="myBtn1" class="btn btn-primary">Solve Challenge</button>
+   			<!--This is the modal -->
+   			<div id="myModal1" class="modal">
+
+  			<!-- Modal content -->
+	  			<div class="modal-content">
+	  				<h4 class ="modal-head">WARM-UP</h4>
+    				<span class="close"></span>
+    		
+    				<p class="card-text" ><span class = "headings">Author</span>                  :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
+
+    		
+    				<p class="card-text" ><span class = "headings">Description</span>        :  This is a welcome challenge with a free flag
+                                    An easy intro to start things off</p>
+    		
+    		
+    				<p class="card-text" ><span class = "headings">Difficulty</span>             :  Easy</p>
+
+    				<p class="card-text" ><span class = "headings">Points</span>                  :  50</p>
+
+    				<p class="card-text"><span class="headings">Challenge</span>          :  <a href="http://anfang-challenges.rf.gd/warmup" target="_blank">http://anfang-challenges.rf.gd/warmup</a></p>
+
+   					<div class = "subform">
+						<form action="#" method="POST" >
+							{% csrf_token %}
+							<div class="mb-3">
+   							<span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
+
+   							<button type="submit" id ="subbut1" class = "btn btn-success"> Submit</button>
+   							</div>
+   						</form>
+   					</div>
+  		    </div>
+		    </div>		
+  		</div>
+		</div>
+	</div>
+
+	<div class="col">
+    	<div class="card">
+  		<div class="card-body">
+    		<h5 class="card-title" style="text-align: center;">INSPECT</h5>
+    		<p class="card-text">Find the flag through some inspection</p>
+    		<p class="card-text" ><span class = "headings">Challenge name</span>  : Inspector</p>
+    		<p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p>
+    		<p class="card-text" ><span class = "headings">Points</span>                      : 50</p>         
+
+   			<button class="btn btn-primary" id="myBtn2" >solve challenge</button> 
+
+        
+        <div id="myModal2" class="modal">
+
+        <!-- Modal content -->
+          <div class="modal-content">
+            <h4 class ="modal-head">INSPECT</h4>
+            <span class="close"></span>
+        
+            <p class="card-text" ><span class = "headings">Author</span>                :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
+
+        
+            <p class="card-text" ><span class = "headings">Description</span>      :  Everything needs a detailed Inspection</p>
+        
+        
+            <p class="card-text" ><span class = "headings">Difficulty</span>           :  Easy</p>
+
+            <p class="card-text" ><span class = "headings">Points</span>                 :  50</p>
+
+            <p class="card-text"><span class="headings">Challenge</span>         :  <a href="http://anfang-challenges.rf.gd/inspect" target="_blank">http://anfang-challenges.rf.gd/inspect</a></p>
+
+            <div class = "subform">
+            <form action="#" method="POST" >
+              {% csrf_token %}
+              <div class="mb-3">
+                <span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
+
+                <button type="submit" id ="subbut2" class = "btn btn-success"> Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  		</div>
+		</div>
+	</div>
+	
+	<div class="col">	
+    	<div class="card">
+  		<div class="card-body">
+    		<h5 class="card-title" style="text-align: center;">ROBOTS</h5>
+    		<p class="card-text">What does robots mean to a website</p>
+    		<p class="card-text" ><span class = "headings">Challenge name</span>  : Robots</p>
+    		<p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p>
+    		<p class="card-text" ><span class = "headings">Points</span>                      : 50</p>
+   			<button  id = "myBtn3" class="btn btn-primary">solve challenge</button>
+
+        <div id="myModal3" class="modal">
+
+        <!-- Modal content -->
+          <div class="modal-content">
+            <h4 class ="modal-head">ROBOTS</h4>
+            <span class="close"></span>
+        
+            <p class="card-text" ><span class = "headings">Author</span>                 :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
+
+        
+            <p class="card-text" ><span class = "headings">Description</span>       :  What does robots mean to a website?</p>
+        
+        
+            <p class="card-text" ><span class = "headings">Difficulty</span>            : Easy</p>
+
+            <p class="card-text" ><span class = "headings">Points</span>                 :  50</p>
+
+            <p class="card-text"><span class="headings">Challenge</span>         :  <a href="http://anfang-challenges.rf.gd/robots" target="_blank">http://anfang-challenges.rf.gd/robots</a></p>
+
+            <div class = "subform">
+              <form action="#" method="POST" >
+                {% csrf_token %}
+                <div class="mb-3">
+                  <span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
+
+                  <button type="submit" id ="subbut3" class = "btn btn-success"> Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" style="text-align: center;">DEFAULTS</h5>
+        <p class="card-text">People sometimes forget to change</p>
+        <p class="card-text" ><span class = "headings">Challenge name</span>  : Defaults</p>
+        <p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p> 
+        <p class="card-text" ><span class = "headings">Points</span>                      : 50</p> 
+        <button id ="myBtn4" class="btn btn-primary">Solve Challenge</button>
+        <!--This is the modal -->
+        <div id="myModal4" class="modal">
+
+        <!-- Modal content -->
+          <div class="modal-content">
+            <h4 class ="modal-head">DEFAULTS</h4>
+            <span class="close"></span>
+        
+            <p class="card-text" ><span class = "headings">Author</span>                 :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
+
+        
+            <p class="card-text" ><span class = "headings">Description</span>       :  Developers always forget someting before pushing into production</p>
+        
+        
+            <p class="card-text" ><span class = "headings">Difficulty</span>            :  Easy</p>
+
+            <p class="card-text" ><span class = "headings">Points</span>                 :  50</p>
+
+            <p class="card-text"><span class="headings">Challenge</span>         :  <a href="http://anfang-challenges.rf.gd/defaults" target="_blank">http://anfang-challenges.rf.gd/defaults</a></p>
+
+            <div class = "subform">
+            <form action="#" method="POST" >
+              {% csrf_token %}
+              <div class="mb-3">
+                <span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
+
+                <button type="submit" id ="subbut4" class = "btn btn-success"> Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+<div class="col">
+  <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" style="text-align: center;">USERAGENTS</h5>
+        <p class="card-text">Do you know what does useragent mean</p>
+        <p class="card-text" ><span class = "headings">Challenge name</span>  : Anfangbrowser</p>
+        <p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p> 
+        <p class="card-text" ><span class = "headings">Points</span>                      : 100</p> 
+        <button id ="myBtn5" class="btn btn-primary">Solve Challenge</button>
+        <!--This is the modal -->
+        <div id="myModal5" class="modal">
+
+        <!-- Modal content -->
+          <div class="modal-content">
+            <h4 class ="modal-head">DEFAULTS</h4>
+            <span class="close"></span>
+        
+            <p class="card-text" ><span class = "headings">Author</span>                 :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
+
+        
+            <p class="card-text" ><span class = "headings">Description</span>       :  You can only get the flag if you're using anfangbrowser</p>
+        
+        
+            <p class="card-text" ><span class = "headings">Difficulty</span>            :  Easy</p>
+
+            <p class="card-text" ><span class = "headings">Points</span>                 :  100</p>
+
+            <p class="card-text"><span class="headings">Challenge</span>         :  <a href="http://anfang-challenges.rf.gd/useragents" target="_blank">http://anfang-challenges.rf.gd/useragents</a></p>
+<!--
+            <div id = "div_hint_useragent">
+              <button id ="hint_useragent" class="btn btn-info">Hint</button>
+              <h6 class="hint" id ="h_usa" style="display: none;">There is no need to download a new browser</h6>
+            </div>
+          -->
+            <div class = "subform">
+            <form action="#" method="POST" >
+              {% csrf_token %}
+              <div class="mb-3">
+                <span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
+
+                <button type="submit" id ="subbut4" class = "btn btn-success"> Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
+</div>
+
+<div class="col">
+  </div>
+
+</div>
+
+    
+	
+
+</body>
+
+	<script type="text/javascript" src="{% static 'challenges/js/home.js' %}"></script>
+</html>
+
+
