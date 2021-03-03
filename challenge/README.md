@@ -32,5 +32,8 @@ For now the challenges are strictly web-based, we will extend to other categorie
 - [x] robots.txt 
 #### Week - 2
 - [x] Default Credentials
-- [ ] Cookie editor 
+- [x] Cookie editor 
 - [x] User-agents
+#### Week - 3
+- [x] Strings
+- [ ] Base encrypion
