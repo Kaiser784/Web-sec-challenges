@@ -78,19 +78,23 @@ WSGI_APPLICATION = 'phase_2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'anfang',
-        'USER': 'anfanguser',
-        'PASSWORD': 'anfangphase_2',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME' : 'anfang',
+#         'USER': 'anfanguser',
+#         'PASSWORD': 'anfangphase_2',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
+
+DATABASES = {
+    'default' : dj_database_url.config(default='postgresql://anfanguser:anfangphase_2@localhost/anfang', conn_max_age=600)
+}
 
 
 # Password validation
