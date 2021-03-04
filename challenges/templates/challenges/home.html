@@ -259,8 +259,7 @@
         <!-- Modal content -->
           <div class="modal-content">
             <h4 class ="modal-head">COOKIE MONSTER</h4>
-            <span class="close"></span>
-        
+
             <p class="card-text" ><span class = "headings">Author</span>                 :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
 
         
@@ -293,7 +292,46 @@
 <div class="row">
     <div class="col">
 
-      
+      <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" style="text-align: center;">STRINGS</h5>
+        <p class="card-text">Why do websites ask to accept cookies?</p>
+        <p class="card-text" ><span class = "headings">Challenge name</span>  : Strings</p>
+        <p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p> 
+        <p class="card-text" ><span class = "headings">Points</span>                      : 100</p> 
+        <button id ="myBtn7" class="btn btn-primary">Solve Challenge</button>
+        <!--This is the modal -->
+        <div id="myModal7" class="modal">
+
+        <!-- Modal content -->
+          <div class="modal-content">
+            <h4 class ="modal-head">STRINGS</h4>
+        
+            <p class="card-text" ><span class = "headings">Author</span>                 :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
+
+        
+            <p class="card-text" ><span class = "headings">Description</span>       :  Strings is a pretty useful command-line tool in linux</p>
+        
+        
+            <p class="card-text" ><span class = "headings">Difficulty</span>            :  Easy</p>
+
+            <p class="card-text" ><span class = "headings">Points</span>                 :  100</p>
+
+            <p class="card-text"><span class="headings">Challenge</span>         :  <a href="http://anfang-challenges.rf.gd/strings/string_it" target="_blank">http://anfang-challenges.rf.gd/strings/string_it</a></p>
+            <div class = "subform">
+            <form action="#" method="POST" >
+              {% csrf_token %}
+              <div class="mb-3">
+                <span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
+
+                <button type="submit" id ="subbut4" class = "btn btn-success"> Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
         
     </div>
     <div class="col">
