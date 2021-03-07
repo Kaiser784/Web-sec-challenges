@@ -1,29 +1,98 @@
 
 body{
-	background-color: #bfbfbf;
+	background-color: #ffffff;
 }
-.card{
-	margin-top: 50px;
-	margin-bottom: 20px;
-	border-radius: 20px;
-	border-width: 3px;
-	border-color: black;
-	background-color: #d9ffb3;
+
+/* NAVBAR */
+
+nav .container-fluid .navbar-brand {
+  color:#1ab188;
+  font-family: 'Roboto', sans-serif;
+  
+  }
+  
+nav .container-fluid .navbar-brand:hover {
+  color:#179b77;
 }
+  
+#bootstrap-override-customnav{
+  background:rgba(19, 35, 47, 1);
+  padding: 15px;
+}
+  
+.navbar-nav .nav-item .nav-link {
+  color:#F2F2F2;
+  font-family: 'Roboto', sans-serif;
+}
+  
+.navbar-nav .nav-item .nav-link:hover {
+  color:#1ab188;
+  font-family: 'Roboto', sans-serif;
+}
+  
+.navbar-nav .nav-item .nav-link:focus {
+  color:#179b77;;
+  box-shadow: none;
+}
+
+/* MAINHEAD CSS */
+
+.mainhead {
+  text-align: center; 
+  padding: 30px 0;
+  position: relative;
+}
+
+.mainhead h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 30px;
+  color: #3b434a;
+  position: relative;
+  z-index: 0;
+}
+
+.mainhead span {
+  position: absolute;
+  margin-top: 25px;
+  color: #eef0f2;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 0;
+}
+
+/* CHALLENGE CARDS CSS */
+
+  .card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: rgba(19, 35, 47, 0.9);
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.5);
+  }
+
+  .list-group{
+    background-color: rgba(19, 35, 47, 0.9);
+  }
+
+  .card-title{
+    color: #1ab188;
+  }
+
  .card-text{
 	white-space: break-spaces;
+  color: #1ab188;
 }
 
 .headings{
 	font-weight:  bold;
-  font-size: 20px; 
-}
-
-#mainhead{
-	color: #80ffff;
-	text-align: center;
-	padding: 20px;
-	background-color: black;
+  font-size: 20px;
+  color: #1ab188;
 }
 
 .subform{
@@ -34,51 +103,4 @@ body{
 	margin-right:10px;
 	font-weight: bold;
 
-}
-
- /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-   /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  border-radius: 10px;
-  width: 50%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-head{
-  text-align: center;
-} 
-
-.hint{
-  display: none;
 }

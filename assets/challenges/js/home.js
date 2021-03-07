@@ -1,17 +1,17 @@
 // Get the modal
 let modal1 = document.getElementById("myModal1");
-let modal2 = document.getElementById("myModal2");
+/*let modal2 = document.getElementById("myModal2");
 let modal3 = document.getElementById("myModal3");
 let modal4 = document.getElementById("myModal4");
-let modal5 = document.getElementById("myModal5");
+let modal5 = document.getElementById("myModal5");*/
 let modals = document.querySelectorAll(".modal");
 //Get buttons
 let btn1 = document.getElementById("myBtn1");
-let btn2 = document.getElementById("myBtn2");
+/*let btn2 = document.getElementById("myBtn2");
 let btn3 = document.getElementById("myBtn3");
 let btn4 = document.getElementById("myBtn4");
-let btn5 = document.getElementById("myBtn5");
-let buttons = document.querySelectorAll(".btn.btn-primary");
+let btn5 = document.getElementById("myBtn5");*/
+let buttons = document.querySelectorAll(".btn.btn-success");
 
 
 //hints 
@@ -22,7 +22,7 @@ let h1 = document.getElementById("h_usa");
 btn1.onclick = function() {
   modal1.style.display = "block";
 }
-
+/*
 btn2.onclick = function() {
   modal2.style.display = "block";
 }
@@ -38,7 +38,7 @@ btn4.onclick = function() {
 btn5.onclick = function() {
   modal5.style.display = "block";
 }
-
+*/
 
 /*
 buttons.forEach(function(button) {
@@ -55,7 +55,7 @@ window.onclick = function(event) {
     modal1.style.display = "none";
   }
 
-  if (event.target == modal2) {
+/*  if (event.target == modal2) {
     modal2.style.display = "none";
   }
 
@@ -69,6 +69,11 @@ window.onclick = function(event) {
 
   if (event.target == modal5) {
     modal5.style.display = "none";
-  }
+  }*/
 
 }
+
+
+
+
+

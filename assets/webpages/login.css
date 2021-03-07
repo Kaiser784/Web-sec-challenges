@@ -11,6 +11,36 @@
     font-family: 'Titillium Web', sans-serif;
   }
   
+  nav .container-fluid .navbar-brand {
+    color:#1ab188;
+    font-family: 'Roboto', sans-serif;
+    
+    }
+    
+  nav .container-fluid .navbar-brand:hover {
+    color:#179b77;
+  }
+    
+  #bootstrap-override-customnav{
+    background:rgba(19, 35, 47, 1);
+    padding: 15px;
+  }
+    
+  .navbar-nav .nav-item .nav-link {
+    color:#F2F2F2;
+    font-family: 'Roboto', sans-serif;
+  }
+    
+  .navbar-nav .nav-item .nav-link:hover {
+    color:#1ab188;
+    font-family: 'Roboto', sans-serif;
+  }
+    
+  .navbar-nav .nav-item .nav-link:focus {
+    color:#179b77;;
+    box-shadow: none;
+  }
+
   a {
     text-decoration: none;
     color: #1ab188;
@@ -22,59 +52,23 @@
   
   .form {
     background: rgba(19, 35, 47, 0.9);
-    padding: 40px;
+    padding: 35px;
     max-width: 600px;
     margin: 40px auto;
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   }
   
-  .tab-group {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 40px 0;
-  }
-  .tab-group:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .tab-group li a {
-    display: block;
-    text-decoration: none;
-    padding: 15px;
-    background: rgba(160, 179, 176, 0.25);
-    color: #a0b3b0;
-    font-size: 20px;
-    float: left;
-    width: 50%;
-    text-align: center;
-    cursor: pointer;
-    transition: .5s ease;
-  }
-  .tab-group li a:hover {
-    background: #179b77;
-    color: #ffffff;
-  }
-  .tab-group .active a {
-    background: #1ab188;
-    color: #ffffff;
-  }
-  
-  .tab-content > div:last-child {
-    display: none;
-  }
-  
   h1 {
     text-align: center;
     color: #ffffff;
-    margin: 0 0 40px;
+    margin: 0 0 35px;
   }
   
   label {
     color: rgba(255, 255, 255, 0.5);
     pointer-events: none;
-    font-size: 22px;
+    font-size: 17px;
   }
   label .req {
     margin: 2px;
@@ -90,7 +84,7 @@
   }
   
   input, textarea {
-    font-size: 22px;
+    font-size: 20px;
     display: block;
     width: 100%;
     height: 100%;
@@ -102,6 +96,7 @@
     border-radius: 0;
     transition: border-color .25s ease, box-shadow .25s ease;
   }
+
   input:focus, textarea:focus {
     outline: 0;
     border-color: #1ab188;
@@ -114,7 +109,7 @@
   
   .field-wrap {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   
   .top-row:after {
@@ -135,7 +130,7 @@
     border: 0;
     outline: none;
     border-radius: 0;
-    padding: 15px 0;
+    padding: 10px 0;
     font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -146,7 +141,7 @@
     -webkit-appearance: none;
   }
   .button:hover, .button:focus {
-    background: #179b77;
+    background: #0a6a51;
   }
   
   .button-block {

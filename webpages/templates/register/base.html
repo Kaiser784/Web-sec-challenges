@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
   <!-- Template Main CSS File -->
   {%load static%}
@@ -19,26 +19,29 @@
 
 <body>
 
-      <nav class="navbar navbar-inverse navbar-static-top">
+      <nav id="bootstrap-override-customnav" class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
+          <a class="navbar-brand" href="{% url 'webpages-home'%}">
+              <img src="" alt="" width="40" height="40">
+          </a>
+          <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link" href="{% url 'webpages-home'%}">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="">LeaderBoard</a></li>
+              </ul>
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                {#Logic on what to display#}
+                {% if user.is_authenticated %}
+                  <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                  <li class="nav-item"><a class="nav-link" href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                {% endif %}
+              </ul>
           </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            {#Register Link#}
-              <li><a class="navbar-link" href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Register</a></li>  
-            {#Logic on what to display#}
-            {% if user.is_authenticated %}
-              <li><a href="{% url 'logout' %}">Logout</a></li>
-            {% else %}
-              <li><a class="navbar-link" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            {% endif %}
-          </ul>
         </div>
       </nav>
 
@@ -50,10 +53,10 @@
 
   <!-- Vendor JS Files -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
-    {%load static%}
+  {%load static%}
   <script src="{% static 'webpages/login.js' %}" type="text/javascript"></script>
 
 </body>

@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+#SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -78,22 +78,22 @@ WSGI_APPLICATION = 'phase_2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME' : 'anfang',
-#         'USER': 'anfanguser',
-#         'PASSWORD': 'anfangphase_2',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME' : 'anfang',
+#        'USER': 'anfanguser',
+#        'PASSWORD': 'anfangphase_2',
+#        'HOST': 'localhost',
+#        'PORT': '',
+#    }
+#}
 
 # db_from_env = dj_database_url.config(conn_max_age=600)
 # DATABASES['default'].update(db_from_env)
 
 DATABASES = {
-    'default' : dj_database_url.config(default='postgresql://anfanguser:anfangphase_2@localhost/anfang', conn_max_age=600)
+   'default' : dj_database_url.config(default='postgresql://anfanguser:anfangphase_2@localhost/anfang', conn_max_age=600)
 }
 
 
@@ -143,4 +143,4 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# SECRET_KEY = 'Mr.t0rbo0@nafnag78-hwyouh'
+SECRET_KEY = 'Mr.t0rbo0@nafnag78-hwyouh'

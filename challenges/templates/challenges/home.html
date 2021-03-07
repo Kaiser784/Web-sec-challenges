@@ -5,262 +5,135 @@
 <html>
 <head>
 	<title>Challenges</title>
+
+  <!-- Vendor CSS Files -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="{% static 'challenges/home.css' %}">
+	
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" type="text/css" href="{% static 'challenges/css/home.css' %}">
 </head>
+
 <body>
 
-	<h1 id="mainhead">CHALLENGES FOR YOU</h1>
-
-	
-	
-<div class="container">
-  <div class="row">
-    <div class="col">
-    	<div class="card">
-  		<div class="card-body">
-    		<h5 class="card-title" style="text-align: center;">WARM-UP</h5>
-    		<p class="card-text">An easy into to start things off</p>
-    		<p class="card-text" ><span class = "headings">Challenge name</span>  : Warmup</p>
-    		<p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p>
-    		<p class="card-text" ><span class = "headings">Points</span>                      : 50</p> 
-   			<button id ="myBtn1" class="btn btn-primary">Solve Challenge</button>
-   			<!--This is the modal -->
-   			<div id="myModal1" class="modal">
-
-  			<!-- Modal content -->
-	  			<div class="modal-content">
-	  				<h4 class ="modal-head">WARM-UP</h4>
-    				<span class="close"></span>
-    		
-    				<p class="card-text" ><span class = "headings">Author</span>                  :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
-
-    		
-    				<p class="card-text" ><span class = "headings">Description</span>        :  This is a welcome challenge with a free flag
-                                    An easy intro to start things off</p>
-    		
-    		
-    				<p class="card-text" ><span class = "headings">Difficulty</span>             :  Easy</p>
-
-    				<p class="card-text" ><span class = "headings">Points</span>                  :  50</p>
-
-    				<p class="card-text"><span class="headings">Challenge</span>          :  <a href="http://anfang-challenges.rf.gd/warmup" target="_blank">http://anfang-challenges.rf.gd/warmup</a></p>
-
-   					<div class = "subform">
-						<form action="#" method="POST" >
-							{% csrf_token %}
-							<div class="mb-3">
-   							<span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
-
-   							<button type="submit" id ="subbut1" class = "btn btn-success"> Submit</button>
-   							</div>
-   						</form>
-   					</div>
-  		    </div>
-		    </div>		
-  		</div>
-		</div>
-	</div>
-
-	<div class="col">
-    	<div class="card">
-  		<div class="card-body">
-    		<h5 class="card-title" style="text-align: center;">INSPECT</h5>
-    		<p class="card-text">Find the flag through some inspection</p>
-    		<p class="card-text" ><span class = "headings">Challenge name</span>  : Inspector</p>
-    		<p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p>
-    		<p class="card-text" ><span class = "headings">Points</span>                      : 50</p>         
-
-   			<button class="btn btn-primary" id="myBtn2" >solve challenge</button> 
-
-        
-        <div id="myModal2" class="modal">
-
-        <!-- Modal content -->
-          <div class="modal-content">
-            <h4 class ="modal-head">INSPECT</h4>
-            <span class="close"></span>
-        
-            <p class="card-text" ><span class = "headings">Author</span>                :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
-
-        
-            <p class="card-text" ><span class = "headings">Description</span>      :  Everything needs a detailed Inspection</p>
-        
-        
-            <p class="card-text" ><span class = "headings">Difficulty</span>           :  Easy</p>
-
-            <p class="card-text" ><span class = "headings">Points</span>                 :  50</p>
-
-            <p class="card-text"><span class="headings">Challenge</span>         :  <a href="http://anfang-challenges.rf.gd/inspect" target="_blank">http://anfang-challenges.rf.gd/inspect</a></p>
-
-            <div class = "subform">
-            <form action="#" method="POST" >
-              {% csrf_token %}
-              <div class="mb-3">
-                <span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
-
-                <button type="submit" id ="subbut2" class = "btn btn-success"> Submit</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-  		</div>
-		</div>
-	</div>
-	
-	<div class="col">	
-    	<div class="card">
-  		<div class="card-body">
-    		<h5 class="card-title" style="text-align: center;">ROBOTS</h5>
-    		<p class="card-text">What does robots mean to a website</p>
-    		<p class="card-text" ><span class = "headings">Challenge name</span>  : Robots</p>
-    		<p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p>
-    		<p class="card-text" ><span class = "headings">Points</span>                      : 50</p>
-   			<button  id = "myBtn3" class="btn btn-primary">solve challenge</button>
-
-        <div id="myModal3" class="modal">
-
-        <!-- Modal content -->
-          <div class="modal-content">
-            <h4 class ="modal-head">ROBOTS</h4>
-            <span class="close"></span>
-        
-            <p class="card-text" ><span class = "headings">Author</span>                 :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
-
-        
-            <p class="card-text" ><span class = "headings">Description</span>       :  What does robots mean to a website?</p>
-        
-        
-            <p class="card-text" ><span class = "headings">Difficulty</span>            : Easy</p>
-
-            <p class="card-text" ><span class = "headings">Points</span>                 :  50</p>
-
-            <p class="card-text"><span class="headings">Challenge</span>         :  <a href="http://anfang-challenges.rf.gd/robots" target="_blank">http://anfang-challenges.rf.gd/robots</a></p>
-
-            <div class = "subform">
-              <form action="#" method="POST" >
-                {% csrf_token %}
-                <div class="mb-3">
-                  <span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
-
-                  <button type="submit" id ="subbut3" class = "btn btn-success"> Submit</button>
-                </div>
-              </form>
-            </div>
-          </div>
+  <nav id="bootstrap-override-customnav" class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'webpages-home'%}">
+            <img src="" alt="" width="40" height="40">
+        </a>
+        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="{% url 'webpages-home'%}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="">LeaderBoard</a></li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                {#Logic on what to display#}
+                {% if user.is_authenticated %}
+                  <li class="nav-item"><div class="nav-link">{{ user.username }}</div></li>
+                  <li class="nav-item"><div class="nav-link">Points</div></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                {% else %} 
+                  <li class="nav-item"><a class="nav-link" href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                {% endif %}
+            </ul>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+  </nav>
 
-  <div class="row">
-    <div class="col">
-      <div class="card">
-      <div class="card-body">
-        <h5 class="card-title" style="text-align: center;">DEFAULTS</h5>
-        <p class="card-text">People sometimes forget to change</p>
-        <p class="card-text" ><span class = "headings">Challenge name</span>  : Defaults</p>
-        <p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p> 
-        <p class="card-text" ><span class = "headings">Points</span>                      : 50</p> 
-        <button id ="myBtn4" class="btn btn-primary">Solve Challenge</button>
-        <!--This is the modal -->
-        <div id="myModal4" class="modal">
-
-        <!-- Modal content -->
-          <div class="modal-content">
-            <h4 class ="modal-head">DEFAULTS</h4>
-            <span class="close"></span>
-        
-            <p class="card-text" ><span class = "headings">Author</span>                 :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
-
-        
-            <p class="card-text" ><span class = "headings">Description</span>       :  Developers always forget someting before pushing into production</p>
-        
-        
-            <p class="card-text" ><span class = "headings">Difficulty</span>            :  Easy</p>
-
-            <p class="card-text" ><span class = "headings">Points</span>                 :  50</p>
-
-            <p class="card-text"><span class="headings">Challenge</span>         :  <a href="http://anfang-challenges.rf.gd/defaults" target="_blank">http://anfang-challenges.rf.gd/defaults</a></p>
-
-            <div class = "subform">
-            <form action="#" method="POST" >
-              {% csrf_token %}
-              <div class="mb-3">
-                <span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
-
-                <button type="submit" id ="subbut4" class = "btn btn-success"> Submit</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>    
-      </div>
-    </div>
-  </div>
-<div class="col">
-  <div class="card">
-      <div class="card-body">
-        <h5 class="card-title" style="text-align: center;">USERAGENTS</h5>
-        <p class="card-text">Do you know what does useragent mean</p>
-        <p class="card-text" ><span class = "headings">Challenge name</span>  : Anfangbrowser</p>
-        <p class="card-text" ><span class = "headings">Difficulty</span>                 : Easy</p> 
-        <p class="card-text" ><span class = "headings">Points</span>                      : 100</p> 
-        <button id ="myBtn5" class="btn btn-primary">Solve Challenge</button>
-        <!--This is the modal -->
-        <div id="myModal5" class="modal">
-
-        <!-- Modal content -->
-          <div class="modal-content">
-            <h4 class ="modal-head">DEFAULTS</h4>
-            <span class="close"></span>
-        
-            <p class="card-text" ><span class = "headings">Author</span>                 :   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">Kaiser784</a></p>
-
-        
-            <p class="card-text" ><span class = "headings">Description</span>       :  You can only get the flag if you're using anfangbrowser</p>
-        
-        
-            <p class="card-text" ><span class = "headings">Difficulty</span>            :  Easy</p>
-
-            <p class="card-text" ><span class = "headings">Points</span>                 :  100</p>
-
-            <p class="card-text"><span class="headings">Challenge</span>         :  <a href="http://anfang-challenges.rf.gd/useragents" target="_blank">http://anfang-challenges.rf.gd/useragents</a></p>
-<!--
-            <div id = "div_hint_useragent">
-              <button id ="hint_useragent" class="btn btn-info">Hint</button>
-              <h6 class="hint" id ="h_usa" style="display: none;">There is no need to download a new browser</h6>
-            </div>
-          -->
-            <div class = "subform">
-            <form action="#" method="POST" >
-              {% csrf_token %}
-              <div class="mb-3">
-                <span class="labeled" style="white-space: break-spaces;" >{{ form }}</span>
-
-                <button type="submit" id ="subbut4" class = "btn btn-success"> Submit</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>    
-      </div>
-    </div>
-</div>
-
-<div class="col">
+  <div class="mainhead">
+    <span>CHALLENGES FOR YOU</span>
+    <h1>CHALLENGES FOR YOU</h1>
   </div>
 
-</div>
-
-    
 	
+  <div class="container" style="margin-top:30px">
+            
+      {% for challenges in challenges.all %}
+
+          {% if forloop.counter0|divisibleby:3 %}
+          <div class="row"> 
+          {% endif %}
+
+              <div class="col-md-4">
+
+                  <div class="card mx-auto" style="width: 20rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">{{ challenges.title }}</h5>
+                        <p class="card-text">{{ challenges.description }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span class = "headings">Difficulty</span>: {{ challenges.difficulty }}</li>
+                        <li class="list-group-item"><span class = "headings">Points</span>: {{ challenges.venari }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <button type="button" class="bs-modal btn btn-sm btn-success" data-toggle="modal" data-target="#modal{{challenges.pk}}">
+                          <span class="fa fa-eye">Solve Challenge</span>
+                        </button>
+                    </div>
+
+                  </div>
+              
+              </div>
+
+          {% if forloop.counter|divisibleby:3 or forloop.last %}
+          </div><!-- Row Closing --> 
+          {% endif %}
+
+      {% endfor %}
+
+  </div>
+
+
+
+
+      
+  {% for challenges in challenges %}
+      <div class="modal fade" id="modal{{challenges.pk}}" tabindex="-1" role="dialog"  aria-hidden="true">
+
+          <div class="modal-dialog" role="document">
+
+              <div class="modal-content">
+
+                  <div class="modal-header">
+                    <h5 class="modal-title">{{ challenges.title }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <p class="card-text"><span class="headings">Author</span>:   <a href="https://www.linkedin.com/in/paul-kadali/" target="_blank">{{ challenges.author }}</a></p>
+                      <p class="card-text" ><span class="headings">Description</span>:  {{ challenges.description }}</p>
+                      <p class="card-text" ><span class="headings">Difficulty</span>:  {{ challenges.difficulty }}</p>
+                      <p class="card-text" ><span class="headings">Points</span>:  {{ challenges.venari }}</p>
+                      <p class="card-text"><span class="headings">Challenge</span>:  <a href="{{ challenges.location.url }}" target="_blank">{{ challenges.location }}</a></p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-success">Submit</button> 
+                  </div>
+                            
+              </div>
+
+          </div>
+
+      </div>
+  {% endfor %}
+
+
+
+  <!-- Vendor JS Files -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 
-	<script type="text/javascript" src="{% static 'challenges/js/home.js' %}"></script>
 </html>
 
 
