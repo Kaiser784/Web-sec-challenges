@@ -6,12 +6,12 @@ class challenges_table(models.Model):
 	title = models.CharField(max_length=20, unique = True)
 	description = models.CharField(max_length=200)
 	venari = models.PositiveIntegerField(default = 0, blank=True)
-	location = models.CharField(max_length = 50)
+	location = models.URLField(max_length = 50)
 	difficulty = models.CharField(max_length=10)
 	author = models.CharField(max_length=20)
 	flag = models.CharField(max_length=150)
 	hints = models.CharField(max_length=200, default='', blank=True)
-
+	author_link = models.URLField(max_length = 50)
 	users = models.ManyToManyField(User, through='ChallengeUserRelation')
 
 	def __str__(self):
