@@ -71,6 +71,14 @@ window.onclick = function(event) {
     modal5.style.display = "none";
   }*/
 
+  if (event.target == modal6) {
+    modal6.style.display = "none";
+  }
+
+    if (event.target == modal7) {
+    modal7.style.display = "none";
+  }
+
 }
 
 
