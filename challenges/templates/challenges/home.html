@@ -92,7 +92,7 @@
 
       
   {% for challenges in challenges %}
-      <div class="modal fade" id="modal{{challenges.pk}}" tabindex="-1" role="dialog"  aria-hidden="true">
+      <div class="modal fade" id="modal{{challenges.pk}}" tabindex="-1" role="dialog" aria-labelledby="challenges-modal" aria-hidden="true">
 
           <div class="modal-dialog" role="document">
 
@@ -112,6 +112,9 @@
                       <p class="card-text"><span class="headings">Challenge</span>:  <a href="{{ challenges.location.url }}" target="_blank">{{ challenges.location }}</a></p>
                   </div>
                   <div class="modal-footer">
+                      <div class="mr-auto">
+                        <p class="card-text mr-auto"><span class="headings">Flag: </span></p>
+                      </div>
                       <button type="button" class="btn btn-success">Submit</button> 
                   </div>
                             
