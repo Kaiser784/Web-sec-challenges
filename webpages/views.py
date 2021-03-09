@@ -2,10 +2,28 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import InputForm
+from challenges.models import ChallengeUserRelation, challenges_table
+from django.contrib.auth.models import User as u
+
 # Create your views here.
 
 def home(request):
     return render(request, 'register/success.html')
+
+def user_relation(user):
+    user_instance = u.objects.get(username=user)
+
+    for obj in challenges_table.objects.all():
+        c = ChallengeUserRelation(user=user_instance, challenge=obj)
+        c.save()
+
+def user_relation_when_new_challenge(ch_title):
+    ch_obj = challenges_table.objects.get(title=ch_title)
+
+    for obj in u.objects.all():
+        c = ChallengeUserRelation(user=obj, challenge=ch_obj)
+        c.save()
+
 
 def register(request):
     if request.method == 'POST':
@@ -14,6 +32,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
+            user_relation(username)
             messages.success(request, f'Your account has been created!')
             return render(request, 'register/success.html', {'data': username})
         else:
@@ -21,6 +40,7 @@ def register(request):
     else:
         form = InputForm()
     return render(request, 'register/register.html', {'form': form})
+
 
 def success(request):
     return render(request, 'register/success.html')
