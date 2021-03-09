@@ -22,3 +22,6 @@ class ChallengeUserRelation(models.Model):
 	user = models.ForeignKey(User, to_field='username', on_delete=models.CASCADE)
 	challenge = models.ForeignKey(challenges_table, to_field='title', on_delete=models.CASCADE)
 	done = models.BooleanField(blank=True, default= False)
+
+	def __str__(self):
+		return f"{self.user.username}--{self.challenge.title}"
