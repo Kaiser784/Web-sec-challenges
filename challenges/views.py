@@ -16,3 +16,7 @@ def home(request):
 		'challenges': challenges,
 	}
 	return render(request,'challenges/home.html', context)
+
+def leaderboard(request):
+
+	return render(request, 'leaderboard/leaderboard.html')

@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import InputForm
-from challenges.models import ChallengeUserRelation, challenges_table
+from challenges.models import ChallengeUserRelation, challenges_table, LeaderBoard
 from django.contrib.auth.models import User as u
 
 # Create your views here.
@@ -11,11 +12,14 @@ def home(request):
     return render(request, 'register/success.html')
 
 def user_relation(user):
-    user_instance = u.objects.get(username=user)
+    user_obj = u.objects.get(username=user)
 
     for obj in challenges_table.objects.all():
-        c = ChallengeUserRelation(user=user_instance, challenge=obj)
+        c = ChallengeUserRelation(user=user_obj, challenge=obj)
         c.save()
+
+    l = LeaderBoard(user=user_obj)
+    l.save()
 
 def user_relation_when_new_challenge(ch_title):
     ch_obj = challenges_table.objects.get(title=ch_title)
@@ -34,7 +38,7 @@ def register(request):
             username = form.cleaned_data.get('username')
             user_relation(username)
             messages.success(request, f'Your account has been created!')
-            return render(request, 'register/success.html', {'data': username})
+            return redirect(reverse('login'))            
         else:
             print(form.errors)
     else:

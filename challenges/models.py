@@ -25,3 +25,12 @@ class ChallengeUserRelation(models.Model):
 
 	def __str__(self):
 		return f"{self.user.username}--{self.challenge.title}"
+
+class LeaderBoard(models.Model):
+	user = models.ForeignKey(User, to_field='username', on_delete=models.CASCADE)
+	venari = models.PositiveIntegerField(default = 0, blank=True)
+	solves = models.PositiveIntegerField(default = 0, blank=True)
+	last_solved = models.DateTimeField(auto_now=True, blank=True)
+
+	def __str__(self):
+		return f"{self.user.username}"
