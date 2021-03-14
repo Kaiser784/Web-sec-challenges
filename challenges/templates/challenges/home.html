@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" href="{% url 'webpages-home'%}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="">LeaderBoard</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'leaderboard' %}">LeaderBoard</a></li>
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
                 {#Logic on what to display#}
@@ -109,7 +109,7 @@
                       <p class="card-text" ><span class="headings">Description</span>:  {{ challenges.description }}</p>
                       <p class="card-text" ><span class="headings">Difficulty</span>:  {{ challenges.difficulty }}</p>
                       <p class="card-text" ><span class="headings">Points</span>:  {{ challenges.venari }}</p>
-                      <p class="card-text"><span class="headings">Challenge</span>:  <a href="{{ challenges.location.url }}" target="_blank">{{ challenges.location }}</a></p>
+                      <p class="card-text"><span class="headings">Challenge</span>:  <a href="{{ challenges.location }}" target="_blank">{{ challenges.location }}</a></p>
                   </div>
                   <div class="modal-footer">
                       <div class="mr-auto">
