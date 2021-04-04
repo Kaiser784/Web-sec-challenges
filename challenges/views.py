@@ -1,11 +1,9 @@
 from django import forms
 from django.urls import reverse
 from django.shortcuts import render
-from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
 from .models import ChallengeUserRelation, challenges_table, LeaderBoard
-from webpages.views import register
 
 # Create your views here.
 def home(request):
@@ -19,7 +17,8 @@ def home(request):
 		query_set = ChallengeUserRelation.objects.select_related('challenge').filter(user = current_user)
 
 		context = {
-			'challenges': query_set,	
+			'challenges': record1,
+			'challenges_modal': query_set,
 			'leaderboard': record2,
 		}
 		
@@ -44,7 +43,10 @@ def home(request):
 		return render(request,'challenges/home.html', context)
 
 	else:
-		return register(request)
+		context = {
+			'challenges': record1,
+		}
+		return render(request,'challenges/home.html', context)
 
 def leaderboard(request):
 	context = {}
