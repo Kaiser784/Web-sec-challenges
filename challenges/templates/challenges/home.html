@@ -57,7 +57,7 @@
           <div class="row"> 
           {% endif %}
 
-              <div class="col-md-4">
+              <div class="col-lg-4 .d-none .d-lg-block .d-xl-none">
 
                   <div class="card mx-auto" style="width: 20rem;">
 
@@ -65,14 +65,20 @@
                         <h5 class="card-title" style="text-align: center;">{{ item.title }}</h5>
                         <p class="card-text">{{ item.description }}</p>
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush"> 
                         <li class="list-group-item"><span class = "headings">Difficulty</span>: {{ item.difficulty }}</li>
                         <li class="list-group-item"><span class = "headings">Points</span>: {{ item.venari }}</li>
                     </ul>
                     <div class="card-body">
-                        <button type="button" class="bs-modal btn btn-sm btn-success" data-toggle="modal" data-target="#modal{{ item.pk }}">
-                          <span class="fa fa-eye">Solve Challenge</span>
-                        </button>
+                        {%if user.is_authenticated%}
+                          <button type="button" class="bs-modal btn btn-sm btn-success" data-toggle="modal" data-target="#modal{{ item.pk }}">
+                            <span class="fa fa-eye">Solve Challenge</span>
+                          </button>
+                        {% else %}
+                          <a class="bs-modal btn btn-sm btn-success" href="{% url 'login' %}">
+                            <span class="fa fa-eye">Solve Challenge</span>
+                          </a>
+                        {% endif %}
                     </div>
 
                   </div>
@@ -92,7 +98,7 @@
 
       
   {% for item in challenges_modal %}
-      <div class="modal fade" id="modal{{ item.challenge.pk   }}" tabindex="-1" role="dialog" aria-labelledby="challenges-modal" aria-hidden="true">
+      <div class="modal fade" id="modal{{ item.challenge.pk }}" tabindex="-1" role="dialog" aria-labelledby="challenges-modal" aria-hidden="true">
 
           <div class="modal-dialog" role="document">
 
