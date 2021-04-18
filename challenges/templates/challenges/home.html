@@ -18,7 +18,7 @@
   <nav id="bootstrap-override-customnav" class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'webpages-home'%}">
-            <img src="" alt="" width="40" height="40">
+            {% load static %}<img src="{% static "challenges/css/anfang1.jpeg" %}" alt="" width="200" height="50">
         </a>
         <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -53,21 +53,21 @@
             
       {% for item in challenges.all %}
 
-          {% if forloop.counter0|divisibleby:3 %}
+          <!--{% if forloop.counter0|divisibleby:3 %}-->
           <div class="row"> 
-          {% endif %}
+          <!--{% endif %}-->
 
-              <div class="col-lg-4 .d-none .d-lg-block .d-xl-none">
+              <div class="deck col-lg-4 col-md-6 col-sm-12">
 
-                  <div class="card mx-auto" style="width: 20rem;">
+                  <div class="card">
 
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center;">{{ item.title }}</h5>
                         <p class="card-text">{{ item.description }}</p>
                     </div>
                     <ul class="list-group list-group-flush"> 
-                        <li class="list-group-item"><span class = "headings">Difficulty</span>: {{ item.difficulty }}</li>
-                        <li class="list-group-item"><span class = "headings">Points</span>: {{ item.venari }}</li>
+                        <li class="list-group-item"><span class = "headings">Difficulty:</span> {{ item.difficulty }}</li>
+                        <li class="list-group-item"><span class = "headings">Points:</span> {{ item.venari }}</li>
                     </ul>
                     <div class="card-body">
                         {%if user.is_authenticated%}
@@ -85,9 +85,9 @@
               
               </div>
 
-          {% if forloop.counter|divisibleby:3 or forloop.last %}
+          <!--{% if forloop.counter|divisibleby:3 or forloop.last %}-->
           </div><!-- Row Closing --> 
-          {% endif %}
+          <!--{% endif %}-->
 
       {% endfor %}
 
@@ -106,16 +106,16 @@
 
                   <div class="modal-header">
                     <h5 class="modal-title">{{ item.challenge.title }}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="bs-modal btn btn-success close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                      <p class="card-text"><span class="headings">Author</span>:   <a href="{{ item.challenge.author_link }}" target="_blank">{{ item.challenge.author }}</a></p>
-                      <p class="card-text" ><span class="headings">Description</span>:  {{ item.challenge.description }}</p>
-                      <p class="card-text" ><span class="headings">Difficulty</span>:  {{ item.challenge.difficulty }}</p>
-                      <p class="card-text" ><span class="headings">Points</span>:  {{ item.challenge.venari }}</p>
-                      <p class="card-text"><span class="headings">Challenge</span>:  <a href="{{ item.challenge.location }}" target="_blank">{{ item.challenge.location }}</a></p>
+                      <p class="modal-text"><span class="headings">Author:</span>   <a href="{{ item.challenge.author_link }}" target="_blank">{{ item.challenge.author }}</a></p>
+                      <p class="modal-text" ><span class="headings">Description:</span>  {{ item.challenge.description }}</p>
+                      <p class="modal-text" ><span class="headings">Difficulty:</span>  {{ item.challenge.difficulty }}</p>
+                      <p class="modal-text" ><span class="headings">Points:</span>  {{ item.challenge.venari }}</p>
+                      <p class="modal-text"><span class="headings">Challenge:</span>  <a href="{{ item.challenge.location }}" target="_blank">{{ item.challenge.location }}</a></p>
                   </div>
                   {% if user.is_authenticated %}
                   {% if not item.done %}
@@ -123,8 +123,8 @@
                       <form action="" method="POST" enctype="multipart/form-data">
                       {% csrf_token %}
                           <div class="mr-auto">
-                            <label for="flagauth" class="card-text mr-auto"><span class="headings">Flag: </span></label>
-                            <input id="flagauth" type="text" name="flag_check">
+                            <label for="flagauth" class="modal-text"><span class="headings">Flag: </span></label>
+                            <input id="flagauth" type="text" name="flag_check" class="fill-width">
                             <input id="flagauth" type="hidden" name="title_check" value="{{ item.challenge.title }}">
                             <button type="submit" class="btn btn-success">Submit</button>
                           </div>

@@ -66,12 +66,26 @@ nav .container-fluid .navbar-brand:hover {
   line-height: 0;
 }
 
+@media (max-width: 767px){
+  .mainhead span{
+    font-size: 40px;
+  }
+}
+
 /* CHALLENGE CARDS CSS */
+
+  .deck{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .card{
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
+    min-height: 16rem;
+    width: 20rem;
     background-color: rgba(19, 35, 47, 0.9);
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.5);
   }
@@ -89,7 +103,7 @@ nav .container-fluid .navbar-brand:hover {
   color: #1ab188;
 }
 
-.headings{
+.list-group .headings{
 	font-weight:  bold;
   font-size: 20px;
   color: #1ab188;
@@ -103,4 +117,32 @@ nav .container-fluid .navbar-brand:hover {
 	margin-right:10px;
 	font-weight: bold;
 
+}
+
+.modal .headings{
+  font-weight:  bold;
+  font-size: 20px;
+}
+
+.modal-content{
+  background-color: rgba(19, 35, 47, 0.9);
+}
+
+.modal-header button{
+  font-size: 15px;
+}
+
+.modal-title{
+  color: #eef0f2;
+  font-size: 30px;
+}
+
+.modal-text{
+	white-space: break-spaces;
+  color: #eef0f2;
+  font-size: 18px;
+}
+
+.modal-body a{
+  color: #1ab188;
 }
