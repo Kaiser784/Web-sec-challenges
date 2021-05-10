@@ -92,6 +92,7 @@ WSGI_APPLICATION = 'phase_2.wsgi.application'
 # db_from_env = dj_database_url.config(conn_max_age=600)
 # DATABASES['default'].update(db_from_env)
 
+#DATABASE_URL=postgres://{user}:{password}@{hostname}:{port}/{database-name}
 DATABASES = {
    'default' : dj_database_url.config(default='postgresql://anfanguser:anfangphase_2@localhost/anfang', conn_max_age=600)
 }
