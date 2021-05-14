@@ -21,17 +21,3 @@ This is to make it easier for the administrators to handle them.
 If you are someone other than the team trying to submit a challenge you'll have to submit a private offical writeup with the folder containing the main files and the markdown in the above format as a zip to example@gmail.com.      
 
 For now the challenges are strictly web-based, we will extend to other categories in the near future.
-
-### Exercises to be uploaded 
-
-#### Week - 1
-- [x] Warm-up/welcome exercise 
-- [x] Source-code analysis 
-- [x] robots.txt 
-#### Week - 2
-- [x] Default Credentials
-- [x] Cookie editor 
-- [x] User-agents
-#### Week - 3
-- [x] Strings
-- [ ] Base encrypion
